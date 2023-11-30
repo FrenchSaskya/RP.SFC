@@ -57,14 +57,13 @@
       rel="stylesheet"
       href="{{ site.url }}/assets/themes/{{ page.layout }}/css/video-js.css"
     />
+    <link
+      rel="stylesheet"
+      href="{{ site.url }}/assets/themes/{{ page.layout }}/css/vjs-theme-city.min.css"
+    />
     <!--[if lt IE 9]>
       <script src="{{site.url}}/assets/themes/{{ page.layout }}/js/videojs-ie8.min.js"></script>
     <![endif]-->
-    {% elsif page.video == "plyrjs" %}
-    <link
-      rel="stylesheet"
-      href="{{ site.url }}/assets/themes/{{ page.layout }}/css/plyr.min.css"
-    />
     {% endif %} {% if page.image == "viewerjs" %}
     <link
       rel="stylesheet"
@@ -144,9 +143,6 @@
     <script src="{{ site.url }}/assets/themes/{{ page.layout }}/js/random-video.js"></script>
     {% if page.video == "videojs" %}
     <script src="{{ site.url }}/assets/themes/{{ page.layout }}/js/videojs.min.js"></script>
-    {% elsif page.video == "plyrjs" %}
-    <script src="{{ site.url }}/assets/themes/{{ page.layout }}/js/plyr.min.js"></script>
-    <script src="{{ site.url }}/assets/themes/{{ page.layout }}/js/plyr-config.js"></script>
     {% endif %} {% if page.image == "viewerjs" %}
     <script src="{{ site.url }}/assets/themes/{{ page.layout }}/js/viewer.min.js"></script>
     <script src="{{ site.url }}/assets/themes/{{ page.layout }}/js/viewer-config.js"></script>

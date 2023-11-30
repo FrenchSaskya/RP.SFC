@@ -3,7 +3,7 @@
 <!-- @VideoJS for {{ include.name }}.png, {{ include.name }}.mp4 & {{ include.name }}.webm -->
 <video
   id="my-video"
-  class="video-js vjs-theme-default vjs-16-9"
+  class="video-js vjs-theme-city vjs-16-9"
   controls
   preload="none"
   poster="{{ site.url }}/assets/themes/uchiha/videos/awakening/poster/{{ include.name }}.png"
@@ -29,36 +29,5 @@
   </p>
 </video>
 <!-- //VideoJS for {{ include.name }}.png, {{ include.name }}.mp4 & {{ include.name }}.webm -->
-{% elsif page.video == "plyrjs" %}
-<!-- @PlyrJS for {{ include.name }}.png, {{ include.name }}.mp4 & {{ include.name }}.webm -->
-<video
-  controls
-  crossorigin
-  playsinline
-  preload="none"
-  poster="{{ site.url }}/assets/themes/uchiha/videos/awakening/poster/{{ include.name }}.png"
-  data-poster="{{ site.url }}/assets/themes/uchiha/videos/awakening/poster/{{ include.name }}.png"
-  id="player"
->
-  <source
-    src="{{ site.url }}/assets/themes/uchiha/videos/awakening/mp4/{{ include.name }}.mp4"
-    type="video/mp4"
-    data-quality="hd"
-    data-res="HD"
-    data-default="true"
-  />
-  <source
-    src="{{ site.url }}/assets/themes/uchiha/videos/awakening/webm/{{ include.name }}.webm"
-    type="video/webm"
-  />
-  <p class="vjs-no-js">
-    To view this video please enable JavaScript, and consider upgrading to a web
-    browser that
-    <a href="https://videojs.com/html5-video-support/" target="_blank"
-      >supports HTML5 video</a
-    >
-  </p>
-</video>
-<!-- //PlyrJS for {{ include.name }}.png, {{ include.name }}.mp4 & {{ include.name }}.webm -->
 {% endif %}
 <!-- //Video Start Lib -->
