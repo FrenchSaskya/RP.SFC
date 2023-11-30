@@ -85,9 +85,9 @@
     <meta name="googlebot" content="noindex, nofollow" />
   </head>
   <body class="is-preload">
-    <div id="wrapper">
+    <div id="wrapper" class="div">
       <header id="header">
-        <div class="logo">
+        <div class="logo div">
           <img
             src="{{ site.url }}/assets/themes/{{ page.layout }}/images/clan.png"
             width="50"
@@ -97,8 +97,8 @@
             class="mt-20"
           />
         </div>
-        <div class="content">
-          <div class="inner">
+        <div class="content div">
+          <div class="inner div">
             <h1>{{ page.character }}</h1>
             <p>
               Dossier pour développer les {{ page.pupil }} pour {{
@@ -111,7 +111,7 @@
         </div>
         {% include uchiha/navigation.html %}
       </header>
-      <div id="main">{{ content }}</div>
+      <div id="main" class="div">{{ content }}</div>
       <footer id="footer">
         <p class="copyright">
           &copy; Uchiha Page - Written by {{ page.author }} with HTML5UP design
