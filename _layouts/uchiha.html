@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="{{site.url}}/assets/themes/uchiha/images/favicon.png"
+    />
+    <title>Uchiha: {{ page.title }}{{ page.character }}</title>
+
+    <link
+      rel="stylesheet"
+      href="{{site.url}}/assets/themes/uchiha/css/main.css"
+    />
+
+    <!--[if lt IE 9]>
+      <script src="{{site.url}}/assets/themes/uchiha/js/videojs-ie8.min.js"></script>
+    <![endif]-->
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="{{site.url}}/assets/themes/uchiha/css/noscript.css"
+      />
+    </noscript>
+
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="googlebot" content="noindex, nofollow" />
+  </head>
+  <body class="is-preload">
+    <div id="wrapper">
+      <header id="header">
+        <div class="logo">
+          <img
+            src="{{site.url}}/assets/themes/uchiha/images/clan.png"
+            width="50"
+            height="70"
+            alt="clan uchiha"
+            draggable="false"
+            class="mt-20"
+          />
+        </div>
+        <div class="content">
+          <div class="inner">
+            <h1>{{ page.title }}{{ page.character }}</h1>
+            <p>
+              Dossier pour développer les {{ page.title }}{{ page.character }},
+              <br />
+              afin de continuer l'évolution du personnage, <br />
+              qui est déjà Chunin 1 année.
+            </p>
+          </div>
+        </div>
+        {% include uchiha/navigation.html %}
+      </header>
+      <div id="main">{{ content }}</div>
+      <footer id="footer">
+        <p class="copyright">
+          &copy; Uchiha Page - Written by {{ page.author }} with HTML5UP design
+          <br />
+          and re-edit / add (VideoJS, ViewerJS, ...) / Jekyll framework.
+        </p>
+      </footer>
+    </div>
+
+    <video
+      autoplay
+      muted
+      loop
+      poster="{{site.url}}/assets/themes/uchiha/videos/poster/sharingan_0.png"
+      id="bg-video"
+      class="bg"
+    >
+      <source
+        src="{{site.url}}/assets/themes/uchiha/videos/sharingan_0.mp4"
+        type="video/mp4"
+      />
+    </video>
+
+    <script src="{{site.url}}/assets/themes/uchiha/js/jquery.min.js"></script>
+    <script src="{{site.url}}/assets/themes/uchiha/js/browser.min.js"></script>
+    <script src="{{site.url}}/assets/themes/uchiha/js/breakpoints.min.js"></script>
+    <script src="{{site.url}}/assets/themes/uchiha/js/util.js"></script>
+    <script src="{{site.url}}/assets/themes/uchiha/js/main.js"></script>
+    <script src="{{site.url}}/assets/themes/uchiha/js/random-video.js"></script>
+    <script src="{{site.url}}/assets/themes/uchiha/js/videojs.min.js"></script>
+    <script src="{{site.url}}/assets/themes/uchiha/js/viewer.min.js"></script>
+    <script src="{{site.url}}/assets/themes/uchiha/js/viewer-config.js"></script>
+  </body>
+</html>
