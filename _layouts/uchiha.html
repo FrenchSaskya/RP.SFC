@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html prefix="og: https://ogp.me/ns#" lang="fr">
   <head>
     <meta charset="utf-8" />
+    <meta property="og:locale" content="fr_FR" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, user-scalable=no"
@@ -9,22 +10,75 @@
     <link
       rel="icon"
       type="image/png"
-      href="{{site.url}}/assets/themes/uchiha/images/favicon.png"
+      href="{{site.url}}/assets/themes/{{ page.layout }}/images/favicon.png"
     />
-    <title>Uchiha: {{ page.title }}{{ page.character }}</title>
 
+    <title>{{ page.pupil }} ← {{ page.character }} Uchiha</title>
+    <meta
+      property="og:title"
+      content="{{ page.pupil }} ← {{ page.character }} Uchiha"
+    />
+    <meta
+      property="twitter:title"
+      content="{{ page.pupil }} ← {{ page.character }} Uchiha"
+    />
+
+    <meta name="description" content="{{ page.description }}" />
+    <meta name="og:description" content="{{ page.description }}" />
+    <meta property="twitter:description" content="{{ page.description }}" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ site.url }}/{{ page.permalink }}" />
+    <meta
+      property="twitter:url"
+      content="{{ site.url }}/{{ page.permalink }}"
+    />
+
+    <meta property="og:site_name" content="RP in SFC by {{ page.author }}" />
+    <meta name="author" content="{{ page.author }}" />
+
+    <meta property="og:image" content="{{ site.url }}/{{ page.og_image }}" />
+    <meta
+      property="og:image:secure_url"
+      content="{{ site.url }}/{{ page.og_image }}"
+    />
+    <meta
+      property="twitter:image"
+      content="{{ site.url }}/{{ page.og_image }}"
+    />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1920" />
+    <meta property="og:image:height" content="1080" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="og:image:alt" content="{{ page.og_image_alt }}" />
+
+    {% if page.video == "videojs" %}
     <link
       rel="stylesheet"
-      href="{{site.url}}/assets/themes/uchiha/css/main.css"
+      href="{{ site.url }}/assets/themes/{{ page.layout }}/css/video-js.css"
     />
-
     <!--[if lt IE 9]>
-      <script src="{{site.url}}/assets/themes/uchiha/js/videojs-ie8.min.js"></script>
+      <script src="{{site.url}}/assets/themes/{{ page.layout }}/js/videojs-ie8.min.js"></script>
     <![endif]-->
+    {% elsif page.video == "plyrjs" %}
+    <link
+      rel="stylesheet"
+      href="{{ site.url }}/assets/themes/{{ page.layout }}/css/plyr.min.css"
+    />
+    {% endif %} {% if page.image == "viewerjs" %}
+    <link
+      rel="stylesheet"
+      href="{{ site.url }}/assets/themes/{{ page.layout }}/css/viewer.min.css"
+    />
+    {% endif %}
+    <link
+      rel="stylesheet"
+      href="{{ site.url }}/assets/themes/{{ page.layout }}/css/main.css"
+    />
     <noscript>
       <link
         rel="stylesheet"
-        href="{{site.url}}/assets/themes/uchiha/css/noscript.css"
+        href="{{ site.url }}/assets/themes/{{ page.layout }}/css/noscript.css"
       />
     </noscript>
 
@@ -36,7 +90,7 @@
       <header id="header">
         <div class="logo">
           <img
-            src="{{site.url}}/assets/themes/uchiha/images/clan.png"
+            src="{{ site.url }}/assets/themes/{{ page.layout }}/images/clan.png"
             width="50"
             height="70"
             alt="clan uchiha"
@@ -46,12 +100,13 @@
         </div>
         <div class="content">
           <div class="inner">
-            <h1>{{ page.title }}{{ page.character }}</h1>
+            <h1>{{ page.character }}</h1>
             <p>
-              Dossier pour développer les {{ page.title }}{{ page.character }},
+              Dossier pour développer les {{ page.pupil }} pour {{
+              page.character }},
               <br />
               afin de continuer l'évolution du personnage, <br />
-              qui est déjà Chunin 1 année.
+              qui est déjà {{ page.rank }}.
             </p>
           </div>
         </div>
@@ -71,24 +126,30 @@
       autoplay
       muted
       loop
-      poster="{{site.url}}/assets/themes/uchiha/videos/poster/sharingan_0.png"
+      poster="{{ site.url }}/assets/themes/{{ page.layout }}/videos/poster/sharingan_0.png"
       id="bg-video"
       class="bg"
     >
       <source
-        src="{{site.url}}/assets/themes/uchiha/videos/sharingan_0.mp4"
+        src="{{ site.url }}/assets/themes/{{ page.layout }}/videos/sharingan_0.mp4"
         type="video/mp4"
       />
     </video>
 
-    <script src="{{site.url}}/assets/themes/uchiha/js/jquery.min.js"></script>
-    <script src="{{site.url}}/assets/themes/uchiha/js/browser.min.js"></script>
-    <script src="{{site.url}}/assets/themes/uchiha/js/breakpoints.min.js"></script>
-    <script src="{{site.url}}/assets/themes/uchiha/js/util.js"></script>
-    <script src="{{site.url}}/assets/themes/uchiha/js/main.js"></script>
-    <script src="{{site.url}}/assets/themes/uchiha/js/random-video.js"></script>
-    <script src="{{site.url}}/assets/themes/uchiha/js/videojs.min.js"></script>
-    <script src="{{site.url}}/assets/themes/uchiha/js/viewer.min.js"></script>
-    <script src="{{site.url}}/assets/themes/uchiha/js/viewer-config.js"></script>
+    <script src="{{ site.url }}/assets/themes/{{ page.layout }}/js/jquery.min.js"></script>
+    <script src="{{ site.url }}/assets/themes/{{ page.layout }}/js/browser.min.js"></script>
+    <script src="{{ site.url }}/assets/themes/{{ page.layout }}/js/breakpoints.min.js"></script>
+    <script src="{{ site.url }}/assets/themes/{{ page.layout }}/js/util.js"></script>
+    <script src="{{ site.url }}/assets/themes/{{ page.layout }}/js/main.js"></script>
+    <script src="{{ site.url }}/assets/themes/{{ page.layout }}/js/random-video.js"></script>
+    {% if page.video == "videojs" %}
+    <script src="{{ site.url }}/assets/themes/{{ page.layout }}/js/videojs.min.js"></script>
+    {% elsif page.video == "plyrjs" %}
+    <script src="{{ site.url }}/assets/themes/{{ page.layout }}/js/plyr.min.js"></script>
+    <script src="{{ site.url }}/assets/themes/{{ page.layout }}/js/plyr-config.js"></script>
+    {% endif %} {% if page.image == "viewerjs" %}
+    <script src="{{ site.url }}/assets/themes/{{ page.layout }}/js/viewer.min.js"></script>
+    <script src="{{ site.url }}/assets/themes/{{ page.layout }}/js/viewer-config.js"></script>
+    {% endif %}
   </body>
 </html>

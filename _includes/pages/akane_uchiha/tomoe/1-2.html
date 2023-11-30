@@ -1,5 +1,7 @@
 <article id="1-2tomoe">
+  {% if page.image == "viewerjs" %}
   <div id="viewerjs">
+    {% endif %}
     <h2 class="major">Tomoe 1 & 2</h2>
     <p>
       Nous avons divisé la demande de Tomoe en 2 scènes, et en 2 moments
@@ -23,7 +25,7 @@
       avons décalée, jusqu’à ce qu’un tas complet tombe sur notre zone.
     </p>
     <p>Seiko a du inextrémiste me sauver d’une #Obito-like.</p>
-    {% include uchiha/viewerjs.html name="1tomoe" %}
+    {% include uchiha/image.html name="1tomoe" %}
     <p>
       La scène a beaucoup stressé Akane de premièrement par son âge qui était 11
       ans à ce moment, d’autant plus qu’elle n’était jamais sortie réellement
@@ -79,7 +81,7 @@
       En souhaitant refermer la porte de Konoha, nous avons revu le Serpent Bleu
       à côté.
     </p>
-    {% include uchiha/viewerjs.html name="snake_find" %}
+    {% include uchiha/image.html name="snake_find" %}
     <p>
       Nous avons tout d’abord essayé de communiquer avec lui à nouveau, ainsi
       que de le nourrir, il acceptait notre nourriture, néanmoins, il n’était
@@ -91,20 +93,20 @@
       développa également un stress grandissant pour quand elle en aurait plus,
       comment il réagirait.
     </p>
-    {% include uchiha/viewerjs.html name="snake_eat" %}
+    {% include uchiha/image.html name="snake_eat" %}
     <p>
       La personnalité d’Akemi essaya donc de calmer Akane en conséquence
       néanmoins disons qu’un roll 30… Même si on met 50 bah… Elle n'est pas
       vraiment très utile en vérité…
     </p>
-    {% include uchiha/viewerjs.html name="snake_akemi_useless" %}
+    {% include uchiha/image.html name="snake_akemi_useless" %}
     <p>
       Par la suite, nous avons tenté de comprendre ce que le Serpent Bleu
       souhaitait et autres, nous lui avons donc proposé de venir s’accrocher à
       l'un d’entre nous (celui de son choix), ce fut étrangement Akane (qui est
       une question actuellement encore sans réponse).
     </p>
-    {% include uchiha/viewerjs.html name="snake_neutralzone" %}
+    {% include uchiha/image.html name="snake_neutralzone" %}
     <p>
       Nous allons donc en direction du pays neutre en essayant de trouver un
       endroit de vie pour ce dernier, a un moment Seiko monte une montagne
@@ -148,7 +150,7 @@
       Arrivant devant Konoha, ils essayèrent une dernière fois de communiquer
       avec le Serpent Bleu afin d’obtenir des informations…
     </p>
-    {% include uchiha/viewerjs.html name="snake_final" %}
+    {% include uchiha/image.html name="snake_final" %}
     <p>
       Ce dernier a répondu à la surprise des deux ninjas en parlant humainement
       avec un accent Méxicain pour signaler qu’il s’appelle Aoda.
@@ -173,7 +175,7 @@
       essayer de remettre ses idées en place, bien qu’encore beaucoup
       chamboulée…
     </p>
-    {% include uchiha/viewerjs.html name="narration" %}
+    {% include uchiha/image.html name="narration" %}
     <h3 class="major">Réaction de Seiko si dossier accepter</h3>
     <p>Il n'a pas vu l’évolution du Sharingan en To. 2</p>
     <h3 class="major">Réaction d’Akane dans tout sa si dossier accepter</h3>
@@ -183,5 +185,7 @@
       moments d’activation et d’évolution, elle se sentit comme vider de son
       chakra et étrange comparé à d’habitude (les effets du sharingan quoi…)
     </p>
+    {% if page.image == "viewerjs" %}
   </div>
+  {% endif %}
 </article>
