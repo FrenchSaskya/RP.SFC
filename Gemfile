@@ -14,7 +14,9 @@ gem "jekyll", "~> 4.3.2"
 # gem "github-pages", group: :jekyll_plugins
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-  
+  # Custom plugins
+  gem 'liquid', '~> 4.0.4'
+  gem 'jekyll-sitemap', '~> 1.4'
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem

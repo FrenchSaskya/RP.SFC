@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html prefix="og: https://ogp.me/ns#" lang="fr" class="h-100">
+  <head>
+    <meta charset="utf-8" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="{{site.url}}/assets/themes/{{ page.layout }}/images/favicon.png"
+    />
+
+    <title>RolePlay ← french.eu.org</title>
+    <meta property="og:title" content="RolePlay ← french.eu.org" />
+    <meta property="twitter:title" content="RolePlay ← french.eu.org" />
+
+    <meta name="description" content="{{ page.description }}" />
+    <meta name="og:description" content="{{ page.description }}" />
+    <meta property="twitter:description" content="{{ page.description }}" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ site.url }}{{ page.permalink }}" />
+    <meta property="twitter:url" content="{{ site.url }}{{ page.permalink }}" />
+
+    <meta property="og:site_name" content="RP by @{{ site.discord }}" />
+    <meta name="author" content="@{{ site.discord }} on Discord" />
+
+    <meta property="og:image" content="{{ site.url }}/{{ page.og_image }}" />
+    <meta
+      property="og:image:secure_url"
+      content="{{ site.url }}/{{ page.og_image }}"
+    />
+    <meta
+      property="twitter:image"
+      content="{{ site.url }}/{{ page.og_image }}"
+    />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1920" />
+    <meta property="og:image:height" content="1080" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="og:image:alt" content="{{ page.og_image_alt }}" />
+
+    <link
+      rel="stylesheet"
+      href="{{ site.url }}/assets/themes/{{ page.layout }}/css/main.css"
+    />
+
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="googlebot" content="noindex, nofollow" />
+  </head>
+  <body class="bg d-flex h-100 text-center text-bg-dark">
+    <div class="z-i w-100 h-100 p-3">
+      <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <header class="mb-auto">
+          <div>
+            <h3 class="float-md-start mb-0">@{{ site.discord }}</h3>
+            <!-- @Navigation with _includes/{{ page.layout }}/navigation.html -->
+            {% include {{ page.layout }}/navigation.html %}
+            <!-- //Navigation with _includes/{{ page.layout }}/navigation.html -->
+          </div>
+        </header>
+        <main class="px-3">
+          <!-- @Contents with pages/homepage.html -->
+          {{ content }}
+          <!-- //Contents with pages/homepage.html -->
+        </main>
+        <footer class="mt-auto text-white-50">
+          <p class="copyright">
+            2023 &copy; {{ page.layout | capitalize }} - Written by
+            <a
+              href="{{ site.discordprofile }}"
+              title="Discord Profile"
+              rel="noopener"
+              target="_blank"
+            >
+              @{{ site.discord }}</a
+            >
+            with Bootstrap design
+            <br />
+            and re-edit / Jekyll framework.
+          </p>
+        </footer>
+      </div>
+    </div>
+
+    {% if page.modal == "activate" %}
+    <!-- @List Modal with _includes/pages/{{ page.layout }}/{{ page.modal_name }}-modal.html -->
+    {% include pages/{{ page.layout }}/{{ page.modal_name }}-modal.html %}
+    <!-- //List Modal with _includes/pages/{{ page.layout }}/{{ page.modal_name }}-modal.html -->
+    {% endif %}
+
+    <script src="{{ site.url }}/assets/themes/{{ page.layout }}/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

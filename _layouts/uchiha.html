@@ -13,14 +13,16 @@
       href="{{site.url}}/assets/themes/{{ page.layout }}/images/favicon.png"
     />
 
-    <title>{{ page.pupil }} ← {{ page.character }} Uchiha</title>
+    <title>
+      {{ page.pupil }} ← {{ page.character }} {{ page.layout | capitalize }}
+    </title>
     <meta
       property="og:title"
-      content="{{ page.pupil }} ← {{ page.character }} Uchiha"
+      content="{{ page.pupil }} ← {{ page.character }} {{ page.layout | capitalize }}"
     />
     <meta
       property="twitter:title"
-      content="{{ page.pupil }} ← {{ page.character }} Uchiha"
+      content="{{ page.pupil }} ← {{ page.character }} {{ page.layout | capitalize }}"
     />
 
     <meta name="description" content="{{ page.description }}" />
@@ -28,14 +30,14 @@
     <meta property="twitter:description" content="{{ page.description }}" />
 
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="{{ site.url }}/{{ page.permalink }}" />
-    <meta
-      property="twitter:url"
-      content="{{ site.url }}/{{ page.permalink }}"
-    />
+    <meta property="og:url" content="{{ site.url }}{{ page.permalink }}" />
+    <meta property="twitter:url" content="{{ site.url }}{{ page.permalink }}" />
 
-    <meta property="og:site_name" content="RP in SFC by {{ page.author }}" />
-    <meta name="author" content="{{ page.author }}" />
+    <meta
+      property="og:site_name"
+      content="RP in {{ page.server }} by @{{ site.discord }}"
+    />
+    <meta name="author" content="@{{ site.discord }} on Discord" />
 
     <meta property="og:image" content="{{ site.url }}/{{ page.og_image }}" />
     <meta
@@ -92,7 +94,7 @@
             src="{{ site.url }}/assets/themes/{{ page.layout }}/images/clan.png"
             width="50"
             height="70"
-            alt="clan uchiha"
+            alt="Clan {{ page.layout | capitalize }}"
             draggable="false"
             class="mt-20"
           />
@@ -109,12 +111,28 @@
             </p>
           </div>
         </div>
-        {% include uchiha/navigation.html %}
+        <!-- @Navigation with _includes/{{ page.layout }}/navigation.html -->
+        {% include {{ page.layout }}/navigation.html %}
+        <!-- //Navigation with _includes/{{ page.layout }}/navigation.html -->
       </header>
-      <div id="main" class="div">{{ content }}</div>
+      <div id="main" class="div">
+        <!-- @Contents with pages/{{ page.layout }}/{{ page.pupil | downcase }}-{{
+              page.character | downcase}}.html -->
+        {{ content }}
+        <!-- //Contents with pages/{{ page.layout }}/{{ page.pupil | downcase }}-{{
+              page.character | downcase}}.html -->
+      </div>
       <footer id="footer">
         <p class="copyright">
-          &copy; Uchiha Page - Written by {{ page.author }} with HTML5UP design
+          2023 &copy; {{ page.layout | capitalize }} Page - Written by
+          <a
+            href="{{ site.discordprofile }}"
+            title="Discord Profile"
+            rel="noopener"
+            target="_blank"
+            >@{{ site.discord }}</a
+          >
+          with HTML5UP design
           <br />
           and re-edit / add (VideoJS, ViewerJS, ...) / Jekyll framework.
         </p>

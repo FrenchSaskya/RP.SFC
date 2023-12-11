@@ -1,0 +1,46 @@
+---
+permalink: /
+description: Un petit site explicatif démontrant les scènes sur le pourquoi du comment Akane a éveillé ses Tomoe du Sharingan.
+og_image: assets/themes/uchiha/videos/poster/sharingan_0.png
+og_image_alt: A two eyes in black background with sharingan 3 tomoe
+layout: homepage
+
+link_1: https://www.instagram.com/p/C0ryOrDMB0s
+link_name_1: Instagram
+link_target_1: _blank
+
+modal: activate
+modal_name: list
+---
+
+<h1>Hey toi ! Que fais-tu ici ?</h1>
+
+<p class="lead">
+  Dans un premier temps, il faut savoir que le site "{{ site.url | replace:
+  'http://', '' | replace: 'https://', ''}}" existe pour des demandes X ou Y
+  pour mes personnages roleplay.
+  <br />
+  <i>Ex: obtention d'évolution, Passif, ...</i>
+</p>
+
+<p class="lead">
+  <a
+    data-bs-toggle="modal"
+    data-bs-target="#list"
+    class="btn btn-lg btn-dark fw-bold border-white bg-dark"
+    title="{{ page.link_name_1 }}"
+    target="{{ page.link_target_1 }}"
+    rel="noopener"
+  >
+    Voir la liste
+  </a>
+  <a
+    href="{{ page.link_1 }}"
+    class="btn btn-lg btn-light fw-bold border-dark bg-white"
+    title="{{ page.link_name_1 }}"
+    target="{{ page.link_target_1 }}"
+    rel="noopener"
+  >
+    Venir sur {{ page.link_name_1 }}
+  </a>
+</p>

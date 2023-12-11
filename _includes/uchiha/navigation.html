@@ -1,13 +1,45 @@
 <nav>
   <ul>
     {% if page.link_name_1 %}
-    <li><a href="#{{ page.link_1 }}">{{ page.link_name_1 }}</a></li>
+    <li>
+      <a
+        href="#{{ page.link_1 }}"
+        title="{{ page.link_name_1 }}"
+        rel="noopener"
+      >
+        {{ page.link_name_1 }}
+      </a>
+    </li>
     {% endif %} {% if page.link_name_2 %}
-    <li><a href="#{{ page.link_2 }}">{{ page.link_name_2 }}</a></li>
+    <li>
+      <a
+        href="#{{ page.link_2 }}"
+        title="{{ page.link_name_2 }}"
+        rel="noopener"
+      >
+        {{ page.link_name_2 }}
+      </a>
+    </li>
     {% endif %} {% if page.link_name_3 %}
-    <li><a href="#{{ page.link_3 }}">{{ page.link_name_3 }}</a></li>
+    <li>
+      <a
+        href="#{{ page.link_3 }}"
+        title="{{ page.link_name_3 }}"
+        rel="noopener"
+      >
+        {{ page.link_name_3 }}
+      </a>
+    </li>
     {% endif %} {% if page.link_name_4 %}
-    <li><a href="#{{ page.link_4 }}">{{ page.link_name_3 }}</a></li>
+    <li>
+      <a
+        href="#{{ page.link_4 }}"
+        title="{{ page.link_name_4 }}"
+        rel="noopener"
+      >
+        {{ page.link_name_4 }}
+      </a>
+    </li>
     {% endif %}
   </ul>
 </nav>
