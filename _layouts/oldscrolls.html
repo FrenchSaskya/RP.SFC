@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html prefix="og: https://ogp.me/ns#" lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="{{site.url}}/assets/themes/{{ page.layout }}/images/favicon.png"
+    />
+
+    <title>{{ page.why }} ← {{ page.scrolls_author }}</title>
+    <meta
+      property="og:title"
+      content="{{ page.why }} ← {{ page.scrolls_author }}"
+    />
+    <meta
+      property="twitter:title"
+      content="{{ page.why }} ← {{ page.scrolls_author }}"
+    />
+
+    <meta name="description" content="{{ page.description }}" />
+    <meta name="og:description" content="{{ page.description }}" />
+    <meta property="twitter:description" content="{{ page.description }}" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ site.url }}{{ page.permalink }}" />
+    <meta property="twitter:url" content="{{ site.url }}{{ page.permalink }}" />
+
+    <meta
+      property="og:site_name"
+      content="RP in {{ page.server }} by @{{ site.discord }}"
+    />
+    <meta name="author" content="@{{ site.discord }} on Discord" />
+
+    <meta property="og:image" content="{{ site.url }}/{{ page.og_image }}" />
+    <meta
+      property="og:image:secure_url"
+      content="{{ site.url }}/{{ page.og_image }}"
+    />
+    <meta
+      property="twitter:image"
+      content="{{ site.url }}/{{ page.og_image }}"
+    />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1920" />
+    <meta property="og:image:height" content="1080" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="og:image:alt" content="{{ page.og_image_alt }}" />
+
+    <link
+      rel="stylesheet"
+      href="{{ site.url }}/assets/themes/{{ page.layout }}/css/main.css"
+    />
+
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="googlebot" content="noindex, nofollow" />
+  </head>
+  <body onload="ScrollHeight()">
+    <main>
+      <div id="oldscrolls"></div>
+      <div id="oldscrolls-content">
+        <p class="inkTitle">
+          {% if page.scrolls_title %} {{ page.scrolls_title }} {% else %}
+          Parchemin non nommé {% endif %}
+        </p>
+        <p id="labarum">
+          {% if page.scrolls_labarum %}
+          <img
+            src="{{ site.url }}/assets/themes/{{ page.layout }}/images/{{ page.scrolls_labarum }}"
+            alt="{{ page.scrolls_labarum }}"
+            draggable="false"
+          />
+          {% else %}
+          <img
+            src="{{ site.url }}/assets/themes/{{ page.layout }}/images/default_labarum.png"
+            alt="default_labarum.png"
+            draggable="false"
+          />
+          {% endif %}
+        </p>
+
+        {{ content }}
+
+        <p class="cachet">
+          <img
+            src="{{ site.url }}/assets/themes/{{ page.layout }}/images/cachet.png"
+            alt="cachet.png"
+            draggable="false"
+            width="50"
+            height="50"
+          />
+        </p>
+        <div id="signature">
+          {% if page.scrolls_author %} {% if page.scrolls_nickname == true
+          %}Surnommé{% endif %} {{ page.scrolls_author }}, {% else %} Autrice
+          inconnue,{% endif %} <br />
+          {% if page.scrolls_location %} {{ page.scrolls_location }} {% else %}
+          Lieu inconnu{% endif %}
+        </div>
+      </div>
+    </main>
+    <svg>
+      <filter id="wavy2">
+        <feTurbulence
+          x="0"
+          y="0"
+          baseFrequency="0.02"
+          numOctaves="5"
+          seed="1"
+        />
+        <feDisplacementMap in="SourceGraphic" scale="20" />
+      </filter>
+    </svg>
+    <footer class="text-white-50">
+      <p class="copyright">
+        2023 &copy; {{ page.layout | capitalize }} - Written by
+        <a
+          href="{{ site.discordprofile }}"
+          title="Discord Profile"
+          rel="noopener"
+          target="_blank"
+        >
+          @{{ site.discord }}</a
+        >
+        with Christophe67 design
+        <br />
+        and re-edit / Jekyll framework.
+      </p>
+    </footer>
+
+    <script src="{{ site.url }}/assets/themes/{{ page.layout }}/js/main.js"></script>
+  </body>
+</html>
