@@ -1,13 +1,11 @@
 ---
 permalink: /
 description: Un petit site montrant les personnages roleplay que je possède et leur demande d'évolution (pupille, passif, ...)
-og_image: assets/themes/homepage/images/background.min.jpg
+og_image: assets/themes/homepage/images/og-bg.jpg
 og_image_alt: A woman with red eyes and mask in her hands.
 layout: homepage
 
-link_1: https://www.instagram.com/p/C1GGx-DIZQ2
-link_name_1: Instagram
-link_target_1: _blank
+instagram_last: https://www.instagram.com/p/C1GGx-DIZQ2/
 
 modal: activate
 modal_name: list
@@ -16,11 +14,11 @@ modal_name: list
 <h1>Hey toi ! Que fais-tu ici ?</h1>
 
 <p class="lead">
-  Dans un premier temps, il faut savoir que le site "{{ site.url | replace:
-  'http://', '' | replace: 'https://', ''}}" existe pour des demandes X ou Y
-  pour mes personnages roleplay.
+  {{ site.name }} existe pour tout ce qui touche de proche ou moins proche
   <br />
-  <i>Ex: obtention d'évolution, Passif, ...</i>
+  au roleplay dans les activités de Sakynasty.
+  <br />
+  <i>Ex: Obtention d'évolution, Passif, FunRP, ...</i>
 </p>
 
 <p class="lead">
@@ -34,12 +32,12 @@ modal_name: list
     Voir la liste
   </a>
   <a
-    href="{{ page.link_1 }}"
+    href="{{ page.instagram_last }}"
     class="btn btn-lg btn-light fw-bold border-dark bg-white"
-    title="{{ page.link_name_1 }}"
-    target="{{ page.link_target_1 }}"
+    title="Dernier poste Instagram"
+    target="_blank"
     rel="noopener"
   >
-    Venir sur {{ page.link_name_1 }}
+    Venir sur Instagram
   </a>
 </p>

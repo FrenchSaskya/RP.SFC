@@ -13,9 +13,9 @@
       href="{{site.url}}/assets/themes/{{ page.layout }}/images/favicon.png"
     />
 
-    <title>RolePlay ← {{ site.url | replace: 'http://', '' | replace: 'https://', ''}}</title>
-    <meta property="og:title" content="RolePlay ← {{ site.url | replace: 'http://', '' | replace: 'https://', ''}}" />
-    <meta property="twitter:title" content="RolePlay ← {{ site.url | replace: 'http://', '' | replace: 'https://', ''}}" />
+    <title>{{ site.name }}</title>
+    <meta property="og:title" content="{{ site.name }}" />
+    <meta property="twitter:title" content="{{ site.name }}" />
 
     <meta name="description" content="{{ page.description }}" />
     <meta name="og:description" content="{{ page.description }}" />
@@ -25,8 +25,8 @@
     <meta property="og:url" content="{{ site.url }}{{ page.permalink }}" />
     <meta property="twitter:url" content="{{ site.url }}{{ page.permalink }}" />
 
-    <meta property="og:site_name" content="RP by @{{ site.discord }}" />
-    <meta name="author" content="@{{ site.discord }} on Discord" />
+    <meta property="og:site_name" content="{{ site.name }}" />
+    <meta name="author" content="{{ site.author }}" />
 
     <meta property="og:image" content="{{ site.url }}/{{ page.og_image }}" />
     <meta
@@ -48,15 +48,15 @@
       href="{{ site.url }}/assets/themes/{{ page.layout }}/css/main.css"
     />
 
-    <meta name="robots" content="noindex, nofollow" />
-    <meta name="googlebot" content="noindex, nofollow" />
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
   </head>
   <body class="bg d-flex h-100 text-center text-bg-dark">
     <div class="z-i w-100 h-100 p-3">
       <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
         <header class="mb-auto">
           <div>
-            <h3 class="float-md-start mb-0">@{{ site.discord }}</h3>
+            <h3 class="float-md-start mb-0">{{ site.name }}</h3>
             <!-- @Navigation with _includes/{{ page.layout }}/navigation.html -->
             {% include {{ page.layout }}/navigation.html %}
             <!-- //Navigation with _includes/{{ page.layout }}/navigation.html -->
@@ -71,12 +71,12 @@
           <p class="copyright">
             2023 &copy; {{ page.layout | capitalize }} - Written by
             <a
-              href="{{ site.discordprofile }}"
-              title="Discord Profile"
+              href="{{ site.site_author }}"
+              title="{{ site.author }}"
               rel="noopener"
               target="_blank"
             >
-              @{{ site.discord }}</a
+              {{ site.author }}</a
             >
             with Bootstrap design
             <br />

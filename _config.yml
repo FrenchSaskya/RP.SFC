@@ -19,5 +19,6 @@
 # in the templates via {{ site.myvariable }}.
 
 url: "https://rp.sakynasty.com" # the base hostname & protocol for your site, e.g. http://example.com
-discord: "sakynasty"
-discordprofile: "https://discord.com/users/1153425300793856174"
+name: "SakyRP"
+author: "Sakynasty"
+site_author: "https://sakynasty.com"

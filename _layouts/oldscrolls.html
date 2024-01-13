@@ -13,14 +13,14 @@
       href="{{site.url}}/assets/themes/{{ page.layout }}/images/favicon.png"
     />
 
-    <title>{{ page.why }} ← {{ page.scrolls_author }}</title>
+    <title>{{ page.why }} ← {{ page.scrolls_author }} ← {{ site.name }}</title>
     <meta
       property="og:title"
-      content="{{ page.why }} ← {{ page.scrolls_author }}"
+      content="{{ page.why }} ← {{ page.scrolls_author }} ← {{ site.name }}"
     />
     <meta
       property="twitter:title"
-      content="{{ page.why }} ← {{ page.scrolls_author }}"
+      content="{{ page.why }} ← {{ page.scrolls_author }} ← {{ site.name }}"
     />
 
     <meta name="description" content="{{ page.description }}" />
@@ -31,11 +31,8 @@
     <meta property="og:url" content="{{ site.url }}{{ page.permalink }}" />
     <meta property="twitter:url" content="{{ site.url }}{{ page.permalink }}" />
 
-    <meta
-      property="og:site_name"
-      content="RP in {{ page.server }} by @{{ site.discord }}"
-    />
-    <meta name="author" content="@{{ site.discord }} on Discord" />
+    <meta property="og:site_name" content="{{ site.name }}" />
+    <meta name="author" content="{{ site.author }}" />
 
     <meta property="og:image" content="{{ site.url }}/{{ page.og_image }}" />
     <meta
@@ -57,8 +54,8 @@
       href="{{ site.url }}/assets/themes/{{ page.layout }}/css/main.css"
     />
 
-    <meta name="robots" content="noindex, nofollow" />
-    <meta name="googlebot" content="noindex, nofollow" />
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
   </head>
   <body onload="ScrollHeight()">
     <main>
@@ -120,12 +117,12 @@
       <p class="copyright">
         2023 &copy; {{ page.layout | capitalize }} - Written by
         <a
-          href="{{ site.discordprofile }}"
-          title="Discord Profile"
+          href="{{ site.site_author }}"
+          title="{{ site.author }}"
           rel="noopener"
           target="_blank"
         >
-          @{{ site.discord }}</a
+          {{ site.author }}</a
         >
         with Christophe67 design
         <br />

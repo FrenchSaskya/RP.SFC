@@ -14,15 +14,16 @@
     />
 
     <title>
-      {{ page.pupil }} ← {{ page.character }} {{ page.layout | capitalize }}
+      {{ page.pupil }} ← {{ page.character }} {{ page.layout | capitalize }} ←
+      {{ site.name }}
     </title>
     <meta
       property="og:title"
-      content="{{ page.pupil }} ← {{ page.character }} {{ page.layout | capitalize }}"
+      content="{{ page.pupil }} ← {{ page.character }} {{ page.layout | capitalize }} ← {{ site.name }}"
     />
     <meta
       property="twitter:title"
-      content="{{ page.pupil }} ← {{ page.character }} {{ page.layout | capitalize }}"
+      content="{{ page.pupil }} ← {{ page.character }} {{ page.layout | capitalize }} ← {{ site.name }}"
     />
 
     <meta name="description" content="{{ page.description }}" />
@@ -33,11 +34,8 @@
     <meta property="og:url" content="{{ site.url }}{{ page.permalink }}" />
     <meta property="twitter:url" content="{{ site.url }}{{ page.permalink }}" />
 
-    <meta
-      property="og:site_name"
-      content="RP in {{ page.server }} by @{{ site.discord }}"
-    />
-    <meta name="author" content="@{{ site.discord }} on Discord" />
+    <meta property="og:site_name" content="{{ site.name }}" />
+    <meta name="author" content="{{ site.author }}" />
 
     <meta property="og:image" content="{{ site.url }}/{{ page.og_image }}" />
     <meta
@@ -83,8 +81,8 @@
       />
     </noscript>
 
-    <meta name="robots" content="noindex, nofollow" />
-    <meta name="googlebot" content="noindex, nofollow" />
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
   </head>
   <body class="is-preload">
     <div id="wrapper" class="div">
@@ -126,11 +124,12 @@
         <p class="copyright">
           2023 &copy; {{ page.layout | capitalize }} Page - Written by
           <a
-            href="{{ site.discordprofile }}"
-            title="Discord Profile"
+            href="{{ site.site_author }}"
+            title="{{ site.author }}"
             rel="noopener"
             target="_blank"
-            >@{{ site.discord }}</a
+          >
+            {{ site.author }}</a
           >
           with HTML5UP design
           <br />
